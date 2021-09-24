@@ -1,0 +1,23 @@
+{
+  "name": "hostel-project",
+  "version": "1.0.0",
+  "description": "Trchnical Council ID Card",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shankarjp/TC_ID_Card.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shankarjp/TC_ID_Card/issues"
+  },
+  "homepage": "https://github.com/shankarjp/TC_ID_Card#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
