@@ -1,139 +1,154 @@
-@import url('httpss://fonts.googleapis.com/css?family=Roboto');
+@import url("httpss://fonts.googleapis.com/css?family=Roboto");
 
 body {
-  background:#656666;
+  background: whitesmoke;
 }
 
 .signup-form {
   font-family: "Roboto", sans-serif;
-  width:650px;
-  margin:30px auto;
-  background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+  width: 1200px;
+  margin: 30px auto;
+  background: linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
   border-radius: 10px;
+  box-shadow: 15px 15px 5px gray;
 }
 
-.form-header  {
-  background-color: #EFF0F1;
+.form-header {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(223, 95, 6, 0.7066176812521884) 100%
+  );
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.form-header h1 {
-  font-size: 30px;
-  text-align:center;
-  color:#666;
-  padding:20px 0;
-  border-bottom:1px solid #cccccc;
+.nittLogo {
+  align-content: center;
+  position: absolute;
+  margin-top: 0.8%;
+  margin-left: 18%;
+  justify-content: center;
 }
 
-
+.form-header h1 {
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  padding: 20px 0;
+  border-bottom: 1px solid #cccccc;
+}
 
 /*---------------------------------------*/
 /* Form Body */
 /*---------------------------------------*/
 .form-body {
-    padding:10px 10px;
-    color:#666;
-  }
+  padding: 10px 10px;
+  color: #666;
+}
 
-  .form-group{
-    margin-bottom:20px;
-  }
+.form-group {
+  margin-bottom: 20px;
+}
 
-  .form-body .label-title {
-    color:#656666;
-    font-size: 17px;
-    font-weight: bold;
-  }
+.form-body .label-title {
+  color: #656666;
+  font-size: 17px;
+  font-weight: bold;
+}
 
-  .form-body .form-input {
-      font-size: 17px;
-      box-sizing: border-box;
-      width: 100%;
-      height: 34px;
-      padding-left: 10px;
-      padding-right: 10px;
-      color: #333333;
-      text-align: left;
-      border: 1px solid #d6d6d6;
-      border-radius: 4px;
-      background: white;
-      outline: none;
-  }
+.form-body .form-input {
+  font-size: 17px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 34px;
+  padding: 7px 10px;
+  border: 0px black;
+  border-bottom: 1px solid rgba(146, 146, 146, 0.932);
+  color: #333333;
+  text-align: left;
+  border-radius: 4px;
+  background: whitesmoke;
+  outline: none;
+}
 
+.horizontal-group .left {
+  float: left;
+  width: 49%;
+}
 
+.horizontal-group .right {
+  float: right;
+  width: 49%;
+}
 
-  .horizontal-group .left{
-    float:left;
-    width:49%;
-  }
+input[type="file"] {
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+}
 
-  .horizontal-group .right{
-    float:right;
-    width:49%;
-  }
+#range-label {
+  width: 15%;
+  padding: 5px;
+  background-color: #1bba93;
+  color: white;
+  border-radius: 5px;
+  font-size: 17px;
+  position: relative;
+  top: -8px;
+}
 
-  input[type="file"] {
-   outline: none;
-   cursor:pointer;
-   font-size: 17px;
-  }
+::-webkit-input-placeholder {
+  color: #d9d9d9;
+}
 
-  #range-label {
-   width:15%;
-   padding:5px;
-   background-color: #1BBA93;
-   color:white;
-   border-radius: 5px;
-   font-size: 17px;
-   position: relative;
-   top:-8px;
-  }
-
-
-  ::-webkit-input-placeholder {
-   color:#d9d9d9;
-  }
-
-  /*---------------------------------------*/
-  /* Form Footer */
-  /*---------------------------------------*/
-  .form-footer {
-   clear:both;
-  }
-
-  /*---------------------------------------*/
+/*---------------------------------------*/
 /* Form Footer */
 /*---------------------------------------*/
-.signup-form .form-footer  {
-    background-color: #EFF0F1;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding:10px 40px;
-    text-align: right;
-    border-top: 1px solid #cccccc;
-  }
+.form-footer {
+  clear: both;
+}
 
-  .form-footer span {
-    float:left;
-    margin-top: 10px;
-    color:#999;
-    font-style: italic;
-    font-weight: thin;
-  }
+/*---------------------------------------*/
+/* Form Footer */
+/*---------------------------------------*/
+.signup-form .form-footer {
+  background-color: #eff0f1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 40px;
+  text-align: right;
+  border-top: 1px solid #cccccc;
+}
 
-  .btn {
-     display:inline-block;
-     padding:10px 20px;
-     background-color: #1BBA93;
-     font-size:17px;
-     border:none;
-     border-radius:5px;
-     color:#bcf5e7;
-     cursor:pointer;
-  }
+.form-footer span {
+  float: left;
+  margin-top: 10px;
+  color: #999;
+  font-style: italic;
+  font-weight: thin;
+}
 
-  .btn:hover {
-    background-color: #169c7b;
-    color:white;
-  }
+.btn {
+  display: inline-block;
+  padding: 10px 70px;
+  background-color: brown;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: chocolate;
+  color: white;
+}
+
+#choose-file {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
