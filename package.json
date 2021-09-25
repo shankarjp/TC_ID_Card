@@ -19,11 +19,13 @@
   },
   "homepage": "https://github.com/shankarjp/TC_ID_Card#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
     "html2canvas": "^1.3.2",
-    "jspdf": "^2.4.0"
+    "jspdf": "^2.4.0",
+    "mongoose": "^6.0.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
