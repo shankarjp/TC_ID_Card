@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+body {
+  font-family: 'PT Sans';
+}
+
 .print-btn {
-    background-color: DodgerBlue;
+    background-color: rgb(233, 64, 13);
     border: none;
     color: white;
     padding: 12px 30px;
@@ -9,5 +14,5 @@
   
   /* Darker background on mouse-over */
   .print-btn:hover {
-    background-color: RoyalBlue;
+    background-color: rgb(194, 72, 34);
   }

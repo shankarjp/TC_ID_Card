@@ -12,3 +12,4 @@ function printPDF () {
         pdf.addImage(imgData, 'JPEG', 0, 0, width, height)
         pdf.save('your-filename.pdf')
 })
+}
