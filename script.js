@@ -5,7 +5,7 @@ const expressLayouts = require('express-ejs-layouts');
 
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 const loginRouter = require('./routes/login')
 const resultRouter = require('./routes/result')
