@@ -7,7 +7,6 @@
     <title>Download ID Card</title>
     <link rel="stylesheet" href="css/result.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body style="display: flex;align-items: center;justify-content: center;min-height: 100vh;">
@@ -124,21 +123,16 @@
 
         </div>
 
-        <button class="print-btn" onClick="printPDF()" ><i class="fa fa-download"></i> Download</button>
+        <dir id="print">
+            <button class="print-btn" onClick="printPDF()" ><i class="fa fa-download"></i> Download</button>
+        </dir>
     </div>
 
-    <script type="module">
+    <script>
         function printPDF () {
-            const domElement = document.getElementsByClassName('cards')
-            html2canvas(domElement, { onclone: (document) => {
-            document.getElementsByClassName('print-btn').style.visibility = 'hidden'
-            }})
-            .then((canvas) => {
-                const imgData = canvas.toDataURL('image/png')
-                const pdf = new jsPdf()
-                pdf.addImage(imgData, 'JPEG', 0, 0, width, height)
-                pdf.save('your-filename.pdf')
-            })
+            document.getElementById('print').style.visibility='hidden';
+            window.print();
+            document.getElementById('print').style.visibility = 'visible'
         }
     </script>
         
