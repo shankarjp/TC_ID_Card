@@ -1,192 +1,198 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-
-    <meta charset="utf-8">
-    <title>ID Card NIT Trichy</title>
+<html lang="en">
+<head>
     <link rel="stylesheet" href="css/login.css">
-  </head>
-
-  <body>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
     <form class="signup-form" action="/register" method="post">
         <!-- form header -->
-    <div class="form-header">
-        <h1>Student ID Card : Registration Form</h1>
-    </div>
-
-    <!-- form body -->
-    <div class="form-body">
-      <!-- Firstname and Lastname -->
-    <div class="horizontal-group">
-      <div class="form-group left">
-          <label for="name" class="label-title">Name *</label>
-          <input type="text" id="firstname" class="form-input" placeholder="Enter your name" required="required" />
-      </div>
-      <div class="form-group right">
-          <label for="fathername" class="label-title">Father's Name</label>
-          <input type="text" id="lastname" class="form-input" placeholder="Father's Name" />
-      </div>
-  </div>
-  <!-- Email -->
-<div class="form-group left">
-  <label for="email" class="label-title">Email*</label>
-  <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
-</div>
-
-<!-- Roll Number and Phone Number -->
-<div class="horizontal-group">
-
-  <div class="form-group left">
-    <label for="Roll Number" class="label-title">Institute Roll Number *</label>
-    <input type="Roll Number" id="Roll Number" class="form-input" placeholder="Institute Roll Number" required="required">
-  </div>
-
-  <div class="form-group right">
-    <label for="Date of Birth" class="label-title">Date of Birth</label>
-    <input type="date" class="form-input">
-  </div>
-
-  <div class="form-group right">
-    <label for="Phone Number" class="label-title">Contact No. *</label>
-    <input type="Phone Number" class="form-input" id="Phone Number" placeholder="Contact No." required="required">
-  </div>
-
-  <div class="form-group left">
-    <label for="Phone Number Guardian" class="label-title">Guardian Contact *</label>
-    <input type="Phone Number" class="form-input" id="Phone Number" placeholder="Guardian Contact No." required="required">
-  </div>
-
-  <div class="form-group right">
-    <label for="Nationality" class="label-title">Nationality *</label>
-    <input type="Nationality" id="Nationality" class="form-input" placeholder="" required="required">
-  </div>
-
-  <div class="form-group left">
-    <label for="State" class="label-title">State *</label>
-    <input type="State" id="State" class="form-input" placeholder="" required="required">
-  </div>
-
-
-</div>
-
-<!-- Gender and Hobbies -->
-<div class="horizontal-group">
-
-  <div class="form-group left">
-      <label class="label-title">Gender:</label>
-      <div class="input-group">
-          <label for="male">
-              <input type="radio" name="gender" value="male" id="male"> Male</label>
-          <label for="female">
-              <input type="radio" name="gender" value="female" id="female"> Female</label>
-      </div>
-  </div>
-
-  <div class="form-group right">
-    <label class="label-title">Blood Group</label>
-    <select class="form-input" id="level" >
-      <option value="AP">A+ve</option>
-      <option value="BP">B+ve</option>
-      <option value="ABP">AB+ve</option>
-      <option value="AN">A-ve</option>
-      <option value="BN">B-ve</option>
-      <option value="ABN">AB-ve</option>
-      <option value="OP">O+ve</option>
-      <option value="ON">O-ve</option>
-
-    </select>
-  </div>
-
-</div>
-
- <!-- Department and Course -->
- <div class="horizontal-group">
-
-  <div class="form-group left" >
-    <label class="label-title">Department</label>
-    <select class="form-input" id="level" >
-      <option value="AR">Architecture</option>
-      <option value="CE">Chemical Engineering</option>
-      <option value="CH">Chemistry</option>
-      <option value="CL">Civil Engineering</option>
-      <option value="CA">Computer Applications</option>
-      <option value="CS">Computer Science and Engineering</option>
-      <option value="EE">Electrical and Electronics Engineering</option>
-      <option value="CL">Civil Engineering</option>
-      <option value="CA">Computer Applications</option>
-      <option value="CS">Computer Science and Engineering</option>
-      <option value="EE">Electrical and Electronics Engineering</option>
-      <option value="EC">Electronics and Communication Engineering</option>
-      <option value="HS">Humanities and Social Sciences</option>
-      <option value="IC">Instrumentation and Control Engineering</option>
-      <option value="MS">Management Studies</option>
-      <option value="EE">Electrical and Electronics Engineering</option>
-      <option value="EC">Electronics and Communication Engineering</option>
-      <option value="HS">Humanities and Social Sciences</option>
-      <option value="IC">Instrumentation and Control Engineering</option>
-      <option value="MS">Management Studies</option>
-      <option value="MA">Mathematics</option>
-      <option value="ME">Mechanical Engineering</option>
-      <option value="MM">Metallurgical and Materials Engineering</option>
-      <option value="PH">Physics</option>
-      <option value="PR">Production Engineering</option>
-
-    </select>
-  </div>
-
-  <div class="form-group right">
-    <label class="label-title">Course</label>
-    <select class="form-input" id="level" >
-      <option value="BT">B-Tech</option>
-      <option value="MT">M-Tech</option>
-      <option value="PD">PhD</option>
-    </select>
-  </div>
-
-</div>
-
- <!-- Profile picture and Year of Passing -->
- <div class="horizontal-group">
-
-  <div class="form-group left" >
-    <label for="choose-file" class="label-title">Passport Photograph (.jpg) *</label>
-    <input type="file" id="choose-file" size="80">
-  </div>
-
-  <div class="form-group left" >
-    <label for="choose-file" class="label-title">Signature (.jpg) *</label>
-    <input type="file" id="choose-file" size="80">
-  </div>
-  <div class="form-group right">
-    <label for="Year of Joining" class="label-title">Year of Joining</label>
-    <input type="number" max="2021" value="2017" class="form-input">
-  </div>
-
-  
-
-
-
-<!-- Bio -->
-<div class="form-group left">
-  <label for="choose-file" class="label-title">Address</label>
-  <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
-</div>
-
-<!-- Submit Button -->
-<div class="form-group right">
-  <button type="submit" class="btn">Submit</button>
-</div>
-
-
+        <div class="form-header">
+            <div class="nittLogo">
+                <img src="nitt.png" width="50" height="50" >
+            </div>
+         
+            <h1>Student ID Card : Registration Form</h1>
+        </div>
     
-
-    <!-- form footer -->
-    <div class="form-footer">
-    </div>
-  </div>
+        <!-- form body -->
+        <div class="form-body">
+            <!-- Firstname and Lastname -->
+            <div class="horizontal-group">
+                <div class="form-group left">
+                    <label for="name" class="label-title">Name *</label>
+                    <input type="text" id="firstname" class="form-input" placeholder="Enter your name"
+                        required="required" />
+                </div>
+                <div class="form-group right">
+                    <label for="fathername" class="label-title">Father's Name</label>
+                    <input type="text" id="lastname" class="form-input" placeholder="Father's Name" />
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="form-group left">
+                <label for="email" class="label-title">Email*</label>
+                <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
+            </div>
+    
+            <!-- Roll Number and Phone Number -->
+            <div class="horizontal-group">
+    
+                <div class="form-group left">
+                    <label for="Roll Number" class="label-title">Institute Roll Number *</label>
+                    <input type="Roll Number" id="Roll Number" class="form-input" placeholder="Institute Roll Number"
+                        required="required">
+                </div>
+    
+                <div class="form-group right">
+                    <label for="Date of Birth" class="label-title">Date of Birth</label>
+                    <input type="date" class="form-input">
+                </div>
+    
+                <div class="form-group right">
+                    <label for="Phone Number" class="label-title">Contact No. *</label>
+                    <input type="Phone Number" class="form-input" id="Phone Number" placeholder="Contact No."
+                        required="required">
+                </div>
+    
+                <div class="form-group left">
+                    <label for="Phone Number Guardian" class="label-title">Guardian Contact *</label>
+                    <input type="Phone Number" class="form-input" id="Phone Number" placeholder="Guardian Contact No."
+                        required="required">
+                </div>
+    
+                <div class="form-group right">
+                    <label for="Nationality" class="label-title">Nationality *</label>
+                    <input type="Nationality" id="Nationality" class="form-input" placeholder="" required="required">
+                </div>
+    
+                <div class="form-group left">
+                    <label for="State" class="label-title">State *</label>
+                    <input type="State" id="State" class="form-input" placeholder="" required="required">
+                </div>
+    
+    
+            </div>
+    
+            <!-- Gender and Hobbies -->
+            <div class="horizontal-group">
+    
+                <div class="form-group left">
+                    <label class="label-title">Gender:</label>
+                    <div class="input-group">
+                        <label for="male">
+                            <input type="radio" name="gender" value="male" id="male"> Male</label>
+                        <label for="female">
+                            <input type="radio" name="gender" value="female" id="female"> Female</label>
+                    </div>
+                </div>
+    
+                <div class="form-group right">
+                    <label class="label-title">Blood Group</label>
+                    <select class="form-input" id="level">
+                        <option value="AP">A+ve</option>
+                        <option value="BP">B+ve</option>
+                        <option value="ABP">AB+ve</option>
+                        <option value="AN">A-ve</option>
+                        <option value="BN">B-ve</option>
+                        <option value="ABN">AB-ve</option>
+                        <option value="OP">O+ve</option>
+                        <option value="ON">O-ve</option>
+    
+                    </select>
+                </div>
+    
+            </div>
+    
+            <!-- Department and Course -->
+            <div class="horizontal-group">
+    
+                <div class="form-group left">
+                    <label class="label-title">Department</label>
+                    <select class="form-input" id="level">
+                        <option value="AR">Architecture</option>
+                        <option value="CE">Chemical Engineering</option>
+                        <option value="CH">Chemistry</option>
+                        <option value="CL">Civil Engineering</option>
+                        <option value="CA">Computer Applications</option>
+                        <option value="CS">Computer Science and Engineering</option>
+                        <option value="EE">Electrical and Electronics Engineering</option>
+                        <option value="CL">Civil Engineering</option>
+                        <option value="CA">Computer Applications</option>
+                        <option value="CS">Computer Science and Engineering</option>
+                        <option value="EE">Electrical and Electronics Engineering</option>
+                        <option value="EC">Electronics and Communication Engineering</option>
+                        <option value="HS">Humanities and Social Sciences</option>
+                        <option value="IC">Instrumentation and Control Engineering</option>
+                        <option value="MS">Management Studies</option>
+                        <option value="EE">Electrical and Electronics Engineering</option>
+                        <option value="EC">Electronics and Communication Engineering</option>
+                        <option value="HS">Humanities and Social Sciences</option>
+                        <option value="IC">Instrumentation and Control Engineering</option>
+                        <option value="MS">Management Studies</option>
+                        <option value="MA">Mathematics</option>
+                        <option value="ME">Mechanical Engineering</option>
+                        <option value="MM">Metallurgical and Materials Engineering</option>
+                        <option value="PH">Physics</option>
+                        <option value="PR">Production Engineering</option>
+    
+                    </select>
+                </div>
+    
+                <div class="form-group right">
+                    <label class="label-title">Course</label>
+                    <select class="form-input" id="level">
+                        <option value="BT">B.Tech.</option>
+                        <option value="MT">M.Tech.</option>
+                        <option value="PD">PhD</option>
+                    </select>
+                </div>
+    
+            </div>
+    
+            <!-- Profile picture and Year of Passing -->
+            <div class="horizontal-group">
+    
+                <div class="form-group left">
+                    <label for="choose-file" class="label-title">Passport Photograph (.jpg) *</label>
+                    <input type="file" id="choose-file" size="80" >
+                </div>
+    
+                <div class="form-group left">
+                    <label for="choose-file" class="label-title">Signature (.jpg) *</label>
+                    <input type="file" id="choose-file" size="80">
+                </div>
+                <div class="form-group right">
+                    <label for="Year of Joining" class="label-title">Year of Joining</label>
+                    <input type="number" max="2021" value="2017" class="form-input">
+                </div>
+    
+    
+    
+    
+    
+                <!-- Bio -->
+                <div class="form-group left">
+                    <label for="choose-file" class="label-title">Address</label>
+                    <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+                </div>
+    
+                <!-- Submit Button -->
+                <div class="form-group right">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+    
+    
+    
+    
+                <!-- form footer -->
+                <div class="form-footer">
+                </div>
+            </div>
     </form>
-
-  </body>
+    
+</body>
 </html>
