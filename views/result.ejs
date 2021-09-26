@@ -15,7 +15,7 @@
         <div class="cards" style="display: flex;align-items: center;justify-content: space-around;flex-wrap: wrap;">
 
             <!-- frontside of the card -->
-            <div class="card" style="width: 400px;box-shadow: 2px 4px 12px 4px rgba(0, 0, 0, 0.06);border-radius: .5rem;padding: .25em;margin: 0 3em;height: 640px;">
+            <div class="card" id="frontpart" style="width: 400px;box-shadow: 2px 4px 12px 4px rgba(0, 0, 0, 0.06);border-radius: .5rem;padding: .25em;margin: 0 3em;height: 640px;">
                 <!-- top image for college logo -->
                 <div class="card-header" style="width:100%; display: flex;align-items: center;flex-wrap: wrap; justify-content: space-around;margin: .5em auto;background: cornsilk;height: 100px;">
                     <img src="nitt.png" alt="" width="100" height="100" class="image">
@@ -78,7 +78,7 @@
             </div>
 
             <!-- backside of the card -->
-            <div class="card" style="width: 400px;box-shadow: 2px 4px 12px 4px rgba(0, 0, 0, 0.06);border-radius: .5rem;padding: .25em;margin: 0 3em;height: 640px;">
+            <div class="card" id="backpart" style="width: 400px;box-shadow: 2px 4px 12px 4px rgba(0, 0, 0, 0.06);border-radius: .5rem;padding: .25em;margin: 0 3em;height: 640px;">
 
                 <!-- top image for college logo -->
                 <div class="card-header" style="width:100%; display: flex;align-items: center;flex-wrap: wrap; justify-content: space-around;margin: .5em auto;background: cornsilk;height: 100px;">
@@ -125,15 +125,25 @@
             </div>
 
             <dir id="print">
-                <button class="print-btn" onClick="printPDF()" ><i class="fa fa-download"></i> Download</button>
+                <button value="front" class="print-btn" onClick="printPDF(this.value)" ><i class="fa fa-download"></i>Front ID Card</button>
+                <button value="back" class="print-btn" onClick="printPDF(this.value)"><i class="fa fa-download"></i>Back ID Card</button>
             </dir>
         </div>
     </div>  
     <script>
-        function printPDF () {
+        function printPDF (value) {
+
             document.getElementById('print').style.visibility='hidden';
+            if(value === "front")
+            document.getElementById('backpart').style.visibility='hidden';
+            if(value === "back")
+            document.getElementById('frontpart').style.visibility='hidden';
+
             window.print();
+
             document.getElementById('print').style.visibility = 'visible'
+            document.getElementById('backpart').style.visibility='visible';
+            document.getElementById('frontpart').style.visibility='visible'
         }
     </script>
 </body>
