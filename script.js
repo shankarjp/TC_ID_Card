@@ -12,7 +12,6 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
 
-console.log(DB_URL)
 // db config
 mongoose.connect(DB_URL, {
     useNewUrlParser: true,
