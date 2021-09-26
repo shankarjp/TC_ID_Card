@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="signup-form" action="/register" method="post">
+    <form class="signup-form" method="POST" action="/form">
         <!-- form header -->
         <div class="form-header">
             <div class="nittLogo">
@@ -24,18 +24,18 @@
             <div class="horizontal-group">
                 <div class="form-group left">
                     <label for="name" class="label-title">Name *</label>
-                    <input type="text" id="firstname" class="form-input" placeholder="Enter your name"
+                    <input type="text" id="firstname" name="firstname" class="form-input" placeholder="Enter your name"
                         required="required" />
                 </div>
                 <div class="form-group right">
                     <label for="fathername" class="label-title">Father's Name</label>
-                    <input type="text" id="lastname" class="form-input" placeholder="Father's Name" />
+                    <input type="text" id="lastname" name="lastname" class="form-input" placeholder="Father's Name" />
                 </div>
             </div>
             <!-- Email -->
             <div class="form-group left">
                 <label for="email" class="label-title">Email*</label>
-                <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
+                <input type="email" id="email" name="email"  class="form-input" placeholder="enter your email" required="required">
             </div>
     
             <!-- Roll Number and Phone Number -->
@@ -43,35 +43,35 @@
     
                 <div class="form-group left">
                     <label for="Roll Number" class="label-title">Institute Roll Number *</label>
-                    <input type="Roll Number" id="Roll Number" class="form-input" placeholder="Institute Roll Number"
+                    <input type="Roll Number" name="rollNo" id="Roll Number" class="form-input" placeholder="Institute Roll Number"
                         required="required">
                 </div>
     
                 <div class="form-group right">
                     <label for="Date of Birth" class="label-title">Date of Birth</label>
-                    <input type="date" class="form-input">
+                    <input type="date" name="DoB" class="form-input">
                 </div>
     
                 <div class="form-group right">
                     <label for="Phone Number" class="label-title">Contact No. *</label>
-                    <input type="Phone Number" class="form-input" id="Phone Number" placeholder="Contact No."
+                    <input type="Phone Number" name="contactNo" class="form-input" id="Phone Number" placeholder="Contact No."
                         required="required">
                 </div>
     
                 <div class="form-group left">
                     <label for="Phone Number Guardian" class="label-title">Guardian Contact *</label>
-                    <input type="Phone Number" class="form-input" id="Phone Number" placeholder="Guardian Contact No."
+                    <input type="Phone Number" name="guardianNo" class="form-input" id="Phone Number" placeholder="Guardian Contact No."
                         required="required">
                 </div>
     
                 <div class="form-group right">
                     <label for="Nationality" class="label-title">Nationality *</label>
-                    <input type="Nationality" id="Nationality" class="form-input" placeholder="" required="required">
+                    <input type="Nationality" name="nationality" id="Nationality" class="form-input" placeholder="" required="required">
                 </div>
     
                 <div class="form-group left">
                     <label for="State" class="label-title">State *</label>
-                    <input type="State" id="State" class="form-input" placeholder="" required="required">
+                    <input type="State" id="State" name="state" class="form-input" placeholder="" required="required">
                 </div>
     
     
@@ -92,7 +92,7 @@
     
                 <div class="form-group right">
                     <label class="label-title">Blood Group</label>
-                    <select class="form-input" id="level">
+                    <select class="form-input" id="level" name="bloodGroup">
                         <option value="AP">A+ve</option>
                         <option value="BP">B+ve</option>
                         <option value="ABP">AB+ve</option>
@@ -112,7 +112,7 @@
     
                 <div class="form-group left">
                     <label class="label-title">Department</label>
-                    <select class="form-input" id="level">
+                    <select class="form-input" id="level" name="department">
                         <option value="AR">Architecture</option>
                         <option value="CE">Chemical Engineering</option>
                         <option value="CH">Chemistry</option>
@@ -144,7 +144,7 @@
     
                 <div class="form-group right">
                     <label class="label-title">Course</label>
-                    <select class="form-input" id="level">
+                    <select class="form-input" id="level" name="course">
                         <option value="BT">B.Tech.</option>
                         <option value="MT">M.Tech.</option>
                         <option value="PD">PhD</option>
@@ -156,18 +156,18 @@
             <!-- Profile picture and Year of Passing -->
             <div class="horizontal-group">
     
-                <div class="form-group left">
+                <!-- <div class="form-group left">
                     <label for="choose-file" class="label-title">Passport Photograph (.jpg) *</label>
-                    <input type="file" id="choose-file" size="80" >
+                    <input type="file" id="choose-file" size="80" name="image">
                 </div>
     
                 <div class="form-group left">
                     <label for="choose-file" class="label-title">Signature (.jpg) *</label>
-                    <input type="file" id="choose-file" size="80">
-                </div>
+                    <input type="file" id="choose-file" size="80" name="signature">
+                </div> -->
                 <div class="form-group right">
                     <label for="Year of Joining" class="label-title">Year of Joining</label>
-                    <input type="number" max="2021" value="2017" class="form-input">
+                    <input type="number" max="2021" value="2017" class="form-input" name="yearOfJoining">
                 </div>
     
     
@@ -184,9 +184,6 @@
                 <div class="form-group right">
                     <button type="submit" class="btn">Submit</button>
                 </div>
-    
-    
-    
     
                 <!-- form footer -->
                 <div class="form-footer">

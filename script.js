@@ -2,14 +2,15 @@
 const express = require('express');
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
-require('dotenv').config({path:'../env/.env'});
+require('dotenv').config({path:'./env/.env'});
 const mongoose = require('mongoose');
 const DB_URL = process.env.DB_URL;
+
 // middlewares
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
-
+app.use(express.urlencoded({extended: true}));
 
 // db config
 mongoose.connect(DB_URL, {

@@ -3,9 +3,10 @@ const mongoose = require('mongoose');
 
 const StudentSchema = new mongoose.Schema({
     Name: String,
-    RollNo: Number,
+    RollNo: String,
     Department: String,
-    Batch: Number,
+    Batch: String,
+    Course: String,
     DateOfBirth: String,
     BloodGroup: String,
     Email: String,
