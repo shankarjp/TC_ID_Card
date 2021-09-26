@@ -2,8 +2,9 @@ const express = require('express');
 const resultRouter = express.Router();
 const resultDetails = require('../models/Student');
 
-resultRouter.get('/', (req, res) => {
-    let resultDetail = resultDetails.find({RollNo: "12"}, function(err, resultDetail){
+resultRouter.get('/:studentId', (req, res) => {
+    const rollno = req.params.studentId+"";
+    let resultDetail = resultDetails.find({RollNo: rollno}, function(err, resultDetail){
         if(err){
             console.log(err);
         }

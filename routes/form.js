@@ -38,7 +38,7 @@ formRouter.post('/', async (req, res) => {
 
         // if student created successfully we direct then to download the pdf
         if (newStudent) {
-            res.redirect('result')
+            res.redirect('/result/'+rollNo)
             res.status(200).json({
                 message: 'Student added successfully'
             })
