@@ -9,7 +9,8 @@ resultRouter.get('/:studentId', (req, res) => {
             console.log(err);
         }
         else {
-            var student=resultDetail[0];
+            //get last/ latest detail
+            var student = resultDetail[resultDetail.length - 1];
             res.render('result', {student: student})
         }
     });
