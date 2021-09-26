@@ -31,7 +31,7 @@ formRouter.post('/', async (req, res) => {
             BloodGroup: bloodGroup,
             Email: email,
             Address: address,
-            contactNo:contactNo,
+            ContactNo:contactNo,
             // Image: image // image to be added
         })
 
