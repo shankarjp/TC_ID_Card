@@ -45,7 +45,7 @@
                 width:200px;
                 height:180px;
                 background: whitesmoke;">
-                    <!-- <img src="#" alt="student image"> -->
+                    <img src="data:<%= student.imagetype %>;charset=utf-8;base64,<%= student.image.toString('base64') %>" alt="student image" style="width: 100%;">
                 </div>
 
                 <!-- now the card details -->
@@ -97,6 +97,8 @@
                     INSTITUTE : +91-431-2503000<br>
                     Website : http://www.nitt.edu</h5>
                 </div>
+
+
                 <!-- now the card details -->
                 <div class="infos" style="display: flex;background: whitesmoke; flex-direction: column;align-items: center;margin-top: 1.5em;">
                     <div class="info" style="display: flex;width:80%;font-size: 1.125rem;font-weight: bold;margin-top: 1em;">
