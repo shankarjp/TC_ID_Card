@@ -2,9 +2,18 @@ const express = require('express');
 const formRouter = express.Router();
 const Student = require('../models/Student');
 require('dotenv').config({path:'../env/.env'});
+const passport = require('passport');
+const auth = require('../middleware/auth')
 
-formRouter.get('/', (req, res) => {
-    res.render('form')
+formRouter.get('/',
+    auth,
+    (req, res) => {
+    res.render('form', {
+        rollnumber: req.user.email.split('@')[0],
+        email: req.user.email,
+        name: req.user.name,
+        phone: req.user.phoneNumber
+    })
 })
 
 formRouter.post('/', async (req, res) => {
