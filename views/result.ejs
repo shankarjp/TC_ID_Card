@@ -24,22 +24,29 @@
                     INSTITUTE : +91-431-2503000<br>
                     Website : http://www.nitt.edu</h5>
                 </div>
-
+                <% let course_color = "brown"; %>
+                <% if(student.Course === "UG"){ %>
+                <%    course_color = "brown"; %>
+                <% } else if(student.Course === "PG"){ %>
+                <%    course_color = "blue"; %>
+                <% } else if(student.Course === "PhD"){ %>
+                <%    course_color = "green"; %>
+                <% } %>
                 
                 <!-- the identity-card -->
                 <div class="card-identity" 
-                     style='margin: .75em auto 0;
-                        background: brown;
+                     style="margin: .75em auto 0;
+                        background:<%= course_color %>;
                         color: white;
                         width: fit-content;
                         padding: .3em 1.5em;
                         border-radius: 1em;
                         text-transform: uppercase;
                         font-weight: bold;
-                        font-size: 1.25rem;'>
+                        font-size: 1.25rem;">
                     identity card
                 </div>
-
+                
                 <!-- now the image -->
                 <div class="card-img" style="margin: 1em auto 0;
                 width:200px;
