@@ -12,7 +12,14 @@ const StudentSchema = new mongoose.Schema({
     Email: String,
     Address: String,
     ContactNo: String,
-    Image: Buffer
+    image: {
+        type: 'buffer',
+        required: true
+    },
+    imagetype: {
+        type: 'string',
+        required: true
+    },
 })
 
 module.exports = mongoose.model('Student', StudentSchema)
