@@ -3,9 +3,11 @@ const homeRouter = express.Router();
 const passport = require('passport')
 const { default: DAuthStrategy } = require('passport-delta-oauth2')
 
-const DAUTH_CLIENT_ID = 'oHYo.lXFw~b8eM6T'
-const DAUTH_CLIENT_SECRET = 'EfWoEj1WM~LLA0HCmvaj~1~aoWIXxehk'
-const DAUTH_CALLBACK_URL = 'http://localhost:3000/auth/dauth/callback'
+require('dotenv').config({path: '../env/.env'})
+
+const DAUTH_CLIENT_ID = process.env.DAUTH_CLIENT_ID
+const DAUTH_CLIENT_SECRET = process.env.DAUTH_CLIENT_SECRET;
+const DAUTH_CALLBACK_URL = process.env.DAUTH_CALLBACK_URL;
 
 passport.use(
     new DAuthStrategy({

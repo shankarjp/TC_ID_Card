@@ -11,7 +11,7 @@ const passport = require('passport')
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false, limit: '500kb'}));
 app.use(express.json());
 
 // db config

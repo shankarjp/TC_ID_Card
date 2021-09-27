@@ -5,6 +5,12 @@ body {
   background-color: rgb(238, 235, 235);
 }
 
+@page {
+  size: auto;
+  size: A3;
+  margin: 0mm;
+}
+
 .print-btn {
     background-color: rgb(233, 64, 13);
     border: none;
