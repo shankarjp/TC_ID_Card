@@ -2,13 +2,16 @@
 
 body {
   font-family: 'PT Sans';
-  background-color: rgb(238, 235, 235);
+  background-color: white;
 }
 
-@page {
-  size: auto;
-  size: A3;
-  margin: 0mm;
+@media print {
+
+  @page {
+    size: A3;
+    margin: 0mm;
+  }
+  
 }
 
 .print-btn {
