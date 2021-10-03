@@ -19,7 +19,7 @@
                 <!-- top image for college logo -->
                 <div class="card-header" style="width:100%; display: flex;align-items: center;flex-wrap: wrap; justify-content: space-around;margin: .5em auto;background: cornsilk;height: 100px;">
                     <img src="/nitt.png" alt="" width="100" height="100" class="image">
-                    <h5>Nationnal Institute of Technology<br>
+                    <h5>National Institute of Technology<br>
                     Tiruchirappalli - 620015, Tamil Nadu<br>
                     INSTITUTE : +91-431-2503000<br>
                     Website : http://www.nitt.edu</h5>
@@ -83,10 +83,18 @@
 
                     </div>
 
+                    <% let course_batch = ""; %>
+                    <% if(student.Course === "UG"){ %>
+                    <%    course_batch = student.Batch+"-"+(parseInt(student.Batch)+4); %>
+                    <% } else if(student.Course === "PG"){ %>
+                    <%    course_batch = student.Batch; %>
+                    <% } else if(student.Course === "PhD"){ %>
+                    <%    course_batch = student.Batch; %>
+                    <% } %>
                     <div class="info" style="display: flex;width:80%;font-size: 1.125rem;font-weight: bold;margin-top: 1em;">
                         
                         <div class="info-key" style="width:50%;justify-self: center;">Batch : </div>
-                        <div class="info-value" style="justify-self: center;"><%=student.Batch+"-"+(parseInt(student.Batch)+4) %></div>
+                        <div class="info-value" style="justify-self: center;"><%=course_batch %></div>
 
                     </div>
                 </div>
@@ -99,7 +107,7 @@
                 <!-- top image for college logo -->
                 <div class="card-header" style="width:100%; display: flex;align-items: center;flex-wrap: wrap; justify-content: space-around;margin: .5em auto;background: cornsilk;height: 100px;">
                     <img src="/nitt.png" alt="" width="100" height="100" class="image">
-                    <h5>Nationnal Institute of Technology<br>
+                    <h5>National Institute of Technology<br>
                     Tiruchirappalli - 620015, Tamil Nadu<br>
                     INSTITUTE : +91-431-2503000<br>
                     Website : http://www.nitt.edu</h5>
