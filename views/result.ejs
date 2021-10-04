@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="display: flex;align-items: center;justify-content: center;min-height: 100vh;">
+<body style="display: flex;align-items: stretch;justify-content: center;min-height: 100vh;">
 
-    <div style="background-color: white;">
+    <div style="background-color: white; padding-top: 100px;">
         <div class="cards" style="display: flex;align-items: center;justify-content: space-around;flex-wrap: wrap;">
 
              <!-- frontside of the card -->
@@ -37,7 +37,7 @@
                 <!-- the identity-card -->
                 <div class="card-identity" 
                      style="margin: .75em auto 0;
-                        background:<%= course_color %>;
+                        background: <%= course_color %>;
                         color: white;
                         width: fit-content;
                         padding: .3em 1.5em;
@@ -103,7 +103,7 @@
             </div>
 
             <!-- backside of the card -->
-            <div class="card" id="frontpart" style="width: 400px;box-shadow: 2px 4px 12px 4px rgba(0, 0, 0, 0.06);border-radius: .5rem;padding: .25em;margin: 0 3em;height: 640px;">
+            <div class="card" id="backpart" style="width: 400px;box-shadow: 2px 4px 12px 4px rgba(0, 0, 0, 0.06);border-radius: .5rem;padding: .25em;margin: 0 3em;height: 640px;">
             <!-- top image for college logo -->
                 <div class="card-header" style="width:100%; display: flex;align-items: center;flex-wrap: wrap; padding-bottom: 11px; justify-content: space-around;margin: .5em auto;background: cornsilk;height: 100px;">
                     <img src="/nitt.png" alt="" width="100" height="100" class="image">
@@ -149,21 +149,26 @@
                 </div>
 
             </div>
-
-            <dir id="print">
-                <button value="front" class="print-btn" onClick="printPDF(this.value)" ><i class="fa fa-download"></i>Front ID Card</button>
-                <button value="back" class="print-btn" onClick="printPDF(this.value)"><i class="fa fa-download"></i>Back ID Card</button>
-            </dir>
         </div>
+
+        <div id="print" style="display: flex;align-items: center;justify-content: center; padding-top: 50px;">
+            <button value="front" class="print-btn" onClick="printPDF(this.value)" ><i class="fa fa-download"></i>Print ID Card</button>
+        </div>
+
+        <!--
+        <div id="print" style="display: flex;align-items: center;justify-content: space-between; padding-top: 50px; padding-left: 150px;padding-right: 150px;">
+            <button value="front" class="print-btn" onClick="printPDF(this.value)" ><i class="fa fa-download"></i>Print ID Card</button>
+            <button value="back" class="print-btn" onClick="printPDF(this.value)"><i class="fa fa-download"></i>Back ID Card</button>
+        </div> -->
     </div>  
     <script>
         function printPDF (value) {
 
             document.getElementById('print').style.visibility='hidden';
-            if(value === "front")
+            /*if(value === "front")
             document.getElementById('backpart').style.visibility='hidden';
             if(value === "back")
-            document.getElementById('frontpart').style.visibility='hidden';
+            document.getElementById('frontpart').style.visibility='hidden';*/
 
             window.print();
 

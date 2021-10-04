@@ -5,13 +5,8 @@ body {
   background-color: white;
 }
 
-@media print {
-
-  @page {
-    size: A3;
-    margin: 0mm;
-  }
-  
+@page {
+  size: landscape;
 }
 
 .print-btn {
