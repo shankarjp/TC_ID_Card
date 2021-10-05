@@ -24,13 +24,14 @@
                     Phone : +91-431-2503000<br>
                     Website : http://www.nitt.edu</h5>
                 </div>
+
                 <% let course_color = "brown"; %>
-                <% if(student.Course === "UG"){ %>
+                <% if(student.Course === "UG - B.Tech" || student.Course === "UG - B.Arch"){ %>
                 <%    course_color = "brown"; %>
-                <% } else if(student.Course === "PG"){ %>
-                <%    course_color = "blue"; %>
                 <% } else if(student.Course === "PhD"){ %>
                 <%    course_color = "green"; %>
+                <% } else { %>
+                <%    course_color = "blue"; %>
                 <% } %>
                 
                 <!-- the identity-card -->
@@ -107,7 +108,7 @@
                 <button value="back" class="print-btn" onClick="printPDF(this.value)"><i class="fa fa-download"></i>Back ID Card</button>
             </div>
 
-            <div class="pagebreak" style="padding-bottom: 180px;"> </div>
+            <div class="pagebreak" style="padding-bottom: 120px;"> </div>
 
             <!-- backside of the card -->
             <div class="card" id="backpart" style="width: 600px;box-shadow: 2px 4px 12px 4px rgba(0, 0, 0, 0.5);border-radius: .5rem;padding: .25em;margin: 0 3em;height: 630px;">
