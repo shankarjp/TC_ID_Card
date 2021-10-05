@@ -11,7 +11,7 @@
 
 <body style="display: flex;align-items: stretch;justify-content: center;min-height: 100vh;">
 
-    <div style="background-color: white; padding-top: 60px;">
+    <div style="background-color: white; padding-top: 60px; display:flexbox; align-items: center;justify-content: center;">
         <div class="cards" style="display: flex;align-items: center;justify-content: space-around;flex-wrap: nowrap;">
 
              <!-- frontside of the card -->
@@ -22,7 +22,7 @@
                     <h5>NATIONAL INSTITUTE OF TECHNOLOGY<br>
                     Tiruchirappalli - 620015, Tamilnadu, India<br>
                     (Under Ministry of Eduation, Govt. of India)<br>
-                    INSTITUTE : +91-431-2503000<br>
+                    Phone : +91-431-2503000<br>
                     Website : http://www.nitt.edu</h5>
                 </div>
                 <% let course_color = "brown"; %>
@@ -107,7 +107,7 @@
                     <h5>NATIONAL INSTITUTE OF TECHNOLOGY<br>
                     Tiruchirappalli - 620015, Tamilnadu, India<br>
                     (Under Ministry of Eduation, Govt. of India)<br>
-                    INSTITUTE : +91-431-2503000<br>
+                    Phone : +91-431-2503000<br>
                     Website : http://www.nitt.edu</h5>
                 </div>
 
@@ -157,8 +157,9 @@
             </div>
         </div>
 
-        <div id="print" style="display: flex;align-items: center;justify-content: center; padding-top: 50px;">
-            <button value="front" class="print-btn" onClick="printPDF(this.value)" ><i class="fa fa-download"></i>Print ID Card</button>
+        <div id="print" style="display: flex;align-items: center;justify-content: space-between; padding-top: 50px;padding-left: 150px;padding-right: 150px;">
+            <button value="front" class="print-btn" onClick="printPDF(this.value)" ><i class="fa fa-download"></i>Front ID Card</button>
+            <button value="back" class="print-btn" onClick="printPDF(this.value)"><i class="fa fa-download"></i>Back ID Card</button>
         </div>
 
         <!--
@@ -170,11 +171,16 @@
     <script>
         function printPDF (value) {
 
+            var rollno = '<%- student.RollNo %>';
             document.getElementById('print').style.visibility='hidden';
-            /*if(value === "front")
-            document.getElementById('backpart').style.visibility='hidden';
-            if(value === "back")
-            document.getElementById('frontpart').style.visibility='hidden';*/
+            if(value === "front"){
+                document.title=rollno+'_id_front';
+                document.getElementById('backpart').style.visibility='hidden';
+            }
+            if(value === "back"){
+                document.title=rollno+'_id_back';
+                document.getElementById('frontpart').style.visibility='hidden';
+            }
 
             window.print();
 
