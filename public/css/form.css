@@ -152,3 +152,170 @@ input[type="file"] {
   padding: 6px 12px;
   cursor: pointer;
 }
+#imageOfLogo {
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 500px) {
+  .signup-form {
+    font-family: "Roboto", sans-serif;
+    width: 300px;
+    margin: 8px auto;
+    background: linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+    border-radius: 2.5px;
+    box-shadow: 3.5px 3.5px 1.25px gray;
+  }
+
+  .form-header {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(223, 95, 6, 0.7066176812521884) 100%
+    );
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .nittLogo {
+    align-content: center;
+    position: absolute;
+    margin-top: 0.8%;
+    margin-left: 18%;
+    width: 10px;
+    height: 10px;
+    justify-content: center;
+  }
+
+  .form-header h1 {
+    font-size: 8px;
+    text-align: center;
+    color: black;
+    padding: 5px 0;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  /*---------------------------------------*/
+  /* Form Body */
+  /*---------------------------------------*/
+  .form-body {
+    padding: 2.5px 2.5px;
+    color: #666;
+  }
+
+  .form-group {
+    margin-bottom: 5px;
+  }
+
+  .form-body .label-title {
+    color: #656666;
+    font-size: 4.2px;
+    font-weight: bold;
+  }
+
+  .form-body .form-input {
+    font-size: 4.2px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 8.5px;
+    padding: 1.7px 2.5px;
+    border: 0px black;
+    border-bottom: 1px solid rgba(146, 146, 146, 0.932);
+    color: #333333;
+    text-align: left;
+    border-radius: 1px;
+    background: whitesmoke;
+    outline: none;
+  }
+
+  .horizontal-group .left {
+    float: left;
+    width: 49%;
+  }
+
+  .horizontal-group .right {
+    float: right;
+    width: 49%;
+  }
+
+  input[type="file"] {
+    outline: none;
+    cursor: pointer;
+    font-size: 4.2px;
+  }
+
+  #range-label {
+    width: 15%;
+    padding: 1.25px;
+    background-color: #1bba93;
+    color: white;
+    border-radius: 1.25px;
+    font-size: 4.2px;
+    position: relative;
+    top: -2px;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #d9d9d9;
+  }
+
+  /*---------------------------------------*/
+  /* Form Footer */
+  /*---------------------------------------*/
+  .form-footer {
+    clear: both;
+  }
+
+  /*---------------------------------------*/
+  /* Form Footer */
+  /*---------------------------------------*/
+  .signup-form .form-footer {
+    background-color: #eff0f1;
+    border-bottom-left-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+    padding: 2.5px 10px;
+    text-align: right;
+    border-top: 1px solid #cccccc;
+  }
+
+  .form-footer span {
+    float: left;
+    margin-top: 2.5px;
+    color: #999;
+    font-style: italic;
+    font-weight: thin;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 2.5px 16px;
+    background-color: brown;
+    font-size: 4.2px;
+    border: none;
+    border-radius: 1.25px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: chocolate;
+    color: white;
+  }
+
+  #choose-file {
+    display: inline-block;
+    padding: 1.5px 3px;
+    cursor: pointer;
+  }
+  #imageOfLogo {
+    width: 12.5px;
+    height: 12.5px;
+  }
+  #male {
+    font-size: 6px;
+  }
+  #female {
+    font-size: 6px;
+  }
+}

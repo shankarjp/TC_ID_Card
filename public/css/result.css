@@ -16,9 +16,38 @@ body {
     padding: 12px 30px;
     cursor: pointer;
     font-size: 20px;
-  }
+}
   
-  /* Darker background on mouse-over */
+.print-btn:hover {
+    background-color: rgb(194, 72, 34);
+}
+
+.card-identity {
+  margin: .75em auto 0;
+  color: white;
+  width: fit-content;
+  padding: .3em 1.5em;
+  border-radius: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .print-btn {
+    background-color: rgb(233, 64, 13);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
   .print-btn:hover {
     background-color: rgb(194, 72, 34);
   }
+
+  .card {
+    width: 50%;
+  }
+}

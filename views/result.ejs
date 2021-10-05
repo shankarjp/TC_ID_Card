@@ -36,15 +36,7 @@
                 
                 <!-- the identity-card -->
                 <div class="card-identity" 
-                     style="margin: .75em auto 0;
-                        background: <%= course_color %>;
-                        color: white;
-                        width: fit-content;
-                        padding: .3em 1.5em;
-                        border-radius: 1em;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        font-size: 1.25rem;">
+                     style="background: <%- course_color %>;" >
                     Student ID
                 </div>
                 
@@ -175,11 +167,11 @@
             var rollno = '<%- student.RollNo %>';
             document.getElementById('print').style.visibility='hidden';
             if(value === "front"){
-                document.title=rollno+'_id_front';
+                document.title=rollno+'_front';
                 document.getElementById('backpart').style.visibility='hidden';
             }
             if(value === "back"){
-                document.title=rollno+'_id_back';
+                document.title=rollno+'_back';
                 document.getElementById('frontpart').style.visibility='hidden';
             }
 

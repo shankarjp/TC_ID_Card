@@ -14,7 +14,7 @@
         <!-- form header -->
         <div class="form-header">
             <div style="display: flex;align-items: center;flex-wrap: wrap; padding-bottom: 20px; justify-content: center;">
-                <img src="nitt.png" width="50" height="50">
+                <img src="nitt.png" id="imageOfLogo">
                 <h1 style="padding-left: 10px;"> Student ID Card : Registration Form</h1>
             </div>
         </div>
@@ -86,9 +86,9 @@
                 <div class="form-group left">
                     <label class="label-title">Gender:</label>
                     <div class="input-group">
-                        <label for="male">
+                        <label for="male" id="male">
                             <input type="radio" name="gender" value="male" id="male"> Male</label>
-                        <label for="female">
+                        <label for="female" id="female">
                             <input type="radio" name="gender" value="female" id="female"> Female</label>
                     </div>
                 </div>
@@ -146,12 +146,8 @@
                     <input type="number" max="2021" value="2017" class="form-input" name="yearOfJoining">
                 </div>
 
-
-
-
-
                 <!-- Bio -->
-                <div class="form-group left">
+                <div class="form-group left " style="padding-left: 12px;">
                     <label for="choose-file" class="label-title">Address</label>
                     <textarea name="address" class="form-input" rows="4" cols="50" style="height:auto"></textarea>
                 </div>
