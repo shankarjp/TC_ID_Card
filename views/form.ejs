@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="css/form.css">
     <meta charset="UTF-8">
@@ -7,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form class="signup-form" method="POST" action="/form">
         <!-- form header -->
         <div class="form-header">
-            <div class="nittLogo">
-                <img src="nitt.png" width="50" height="50" >
+            <div style="display: flex;align-items: center;flex-wrap: wrap; padding-bottom: 20px; justify-content: center;">
+                <img src="nitt.png" width="50" height="50">
+                <h1 style="padding-left: 10px;"> Student ID Card : Registration Form</h1>
             </div>
-         
-            <h1>Student ID Card : Registration Form</h1>
         </div>
-    
+
         <!-- form body -->
         <div class="form-body">
             <!-- Firstname and Lastname -->
@@ -35,51 +36,53 @@
             <!-- Email -->
             <div class="form-group left">
                 <label for="email" class="label-title">Email*</label>
-                <input type="email" id="email" name="email"  class="form-input" placeholder="enter your email" required="required" value="<%= email %>">
+                <input type="email" id="email" name="email" class="form-input" placeholder="enter your email"
+                    required="required" value="<%= email %>">
             </div>
-    
+
             <!-- Roll Number and Phone Number -->
             <div class="horizontal-group">
-    
+
                 <div class="form-group left">
                     <label for="Roll Number" class="label-title">Institute Roll Number *</label>
-                    <input type="Roll Number" name="rollNo" id="Roll Number" class="form-input" placeholder="Institute Roll Number"
-                        required="required" value ="<%= rollnumber %>">
+                    <input type="Roll Number" name="rollNo" id="Roll Number" class="form-input"
+                        placeholder="Institute Roll Number" required="required" value="<%= rollnumber %>">
                 </div>
-    
+
                 <div class="form-group right">
                     <label for="Date of Birth" class="label-title">Date of Birth</label>
                     <input type="date" name="DoB" class="form-input" required>
                 </div>
-    
+
                 <div class="form-group right">
                     <label for="Phone Number" class="label-title">Contact No. *</label>
-                    <input type="Phone Number" name="contactNo" class="form-input" id="Phone Number" placeholder="Contact No."
-                        required="required" value="<%= phone %>">
+                    <input type="Phone Number" name="contactNo" class="form-input" id="Phone Number"
+                        placeholder="Contact No." required="required" value="<%= phone %>">
                 </div>
-    
+
                 <div class="form-group left">
                     <label for="Phone Number Guardian" class="label-title">Guardian Contact *</label>
-                    <input type="Phone Number" name="guardianNo" class="form-input" id="Phone Number" placeholder="Guardian Contact No."
-                        required="required" >
+                    <input type="Phone Number" name="guardianNo" class="form-input" id="Phone Number"
+                        placeholder="Guardian Contact No." required="required">
                 </div>
-    
+
                 <div class="form-group right">
                     <label for="Nationality" class="label-title">Nationality *</label>
-                    <input type="Nationality" name="nationality" id="Nationality" class="form-input" placeholder="" required="required">
+                    <input type="Nationality" name="nationality" id="Nationality" class="form-input" placeholder=""
+                        required="required">
                 </div>
-    
+
                 <div class="form-group left">
                     <label for="State" class="label-title">State *</label>
                     <input type="State" id="State" name="state" class="form-input" placeholder="" required="required">
                 </div>
-    
-    
+
+
             </div>
-    
+
             <!-- Gender and Hobbies -->
             <div class="horizontal-group">
-    
+
                 <div class="form-group left">
                     <label class="label-title">Gender:</label>
                     <div class="input-group">
@@ -89,7 +92,7 @@
                             <input type="radio" name="gender" value="female" id="female"> Female</label>
                     </div>
                 </div>
-    
+
                 <div class="form-group right">
                     <label class="label-title">Blood Group</label>
                     <select class="form-input" id="level" name="bloodGroup">
@@ -101,57 +104,39 @@
                         <option value="AB-ve">AB-ve</option>
                         <option value="O+ve">O+ve</option>
                         <option value="O-ve">O-ve</option>
-    
+
                     </select>
                 </div>
-    
+
             </div>
-    
+
             <!-- Department and Course -->
             <div class="horizontal-group">
-    
+
                 <div class="form-group left">
                     <label class="label-title">Department</label>
-                    <select class="form-input" id="level" name="department">
-                        <option value="Architecture">Architecture</option>
-                        <option value="Chemical Engineering">Chemical Engineering</option>
-                        <option value="Chemistry">Chemistry</option>
-                        <option value="Civil Engineerin">Civil Engineering</option>
-                        <option value="Computer Applications">Computer Applications</option>
-                        <option value="Computer Science and Engineering">Computer Science and Engineering</option>
-                        <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
-                        <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
-                        <option value="Humanities and Social Sciences">Humanities and Social Sciences</option>
-                        <option value="Instrumentation and Control Engineering">Instrumentation and Control Engineering</option>
-                        <option value="Management Studies">Management Studies</option>
-                        <option value="Mathematics">Mathematics</option>
-                        <option value="Mechanical Engineering">Mechanical Engineering</option>
-                        <option value="Metallurgical and Materials Engineering">Metallurgical and Materials Engineering</option>
-                        <option value="Physics">Physics</option>
-                        <option value="Production Engineering">Production Engineering</option>
-    
+                    <select class="form-input" id="departmentName" name="department">
+                        <option value="" selected = "selected">Select Programme first</option>
                     </select>
                 </div>
-    
+
                 <div class="form-group right">
-                    <label class="label-title">Course</label>
-                    <select class="form-input" id="level" name="course">
-                        <option value="UG">UG</option>
-                        <option value="PG">PG</option>
-                        <option value="PhD">PhD</option>
+                    <label class="label-title">Programmes</label>
+                    <select class="form-input" id="courseName" name="course">
+                        <option value="" selected="selected">Select Programme</option>
                     </select>
                 </div>
-    
+
             </div>
-    
+
             <!-- Profile picture and Year of Passing -->
             <div class="horizontal-group">
-    
+
                 <div class="form-group left">
                     <label for="image" class="label-title">Passport Photograph (.jpg) *</label>
                     <input type="file" id="image" class="filepond" name="image" required>
                 </div>
-    
+
                 <!-- <div class="form-group left">
                     <label for="choose-file" class="label-title">Signature (.jpg) *</label>
                     <input type="file" id="choose-file" size="80" name="signature">
@@ -160,27 +145,112 @@
                     <label for="Year of Joining" class="label-title">Year of Joining</label>
                     <input type="number" max="2021" value="2017" class="form-input" name="yearOfJoining">
                 </div>
-    
-    
-    
-    
-    
+
+
+
+
+
                 <!-- Bio -->
                 <div class="form-group left">
                     <label for="choose-file" class="label-title">Address</label>
                     <textarea name="address" class="form-input" rows="4" cols="50" style="height:auto"></textarea>
                 </div>
-    
+
                 <!-- Submit Button -->
                 <div class="form-group right">
                     <button type="submit" class="btn">Submit</button>
                 </div>
-    
+
                 <!-- form footer -->
                 <div class="form-footer">
                 </div>
             </div>
     </form>
-    
+
+    <script>
+        var subjectObject = {
+                "UG - B.Tech": {
+                    "Chemical Engineering": [], "Civil Engineering": [], "Computer Science and Engineering": [], "Electrical and Electronics Engineering": [], "Electronics and Communication Engineering": [], "Instrumentation and Control Engineering": [], "Mechanical Engineering": [], "Metallurgical and Materials Engineering": [], "Production Engineering": []
+                },
+                "UG - B.Arch": {
+                    "Architecture": []
+                },
+                "PG - M.Tech": {
+                    "Energy Engineering": [],
+                    "Chemical Engineering": [],
+                    "Process Control and Instrumentation": [],
+                    "Industrial Automation": [],
+                    "Transportation Engineering and Management": [],
+                    "Construction Technology and Management": [],
+                    "Structural Engineering": [],
+                    "Environmental Engineering": [],
+                    "Computer Science and Engineering": [],
+                    "Power Electronics": [],
+                    "Power Systems": [],
+                    "Communication Systems": [],
+                    "VLSI System": [],
+                    "Industrial Safety Engineering": [],
+                    "Thermal Power Engineering": [],
+                    "Material science and Engineering": [],
+                    "Industrial metallurgy": [],
+                    "Welding Engineering": [],
+                    "Industrial Engineering and Management": [],
+                    "Manufacturing Technology": [],
+                    "Non-Destructive Testing": [],
+                    "Data Analytics": [],
+                    "Geotechnical Engineering": [],
+                },
+                "PG - M.Arch": {
+                    "Energy Efficient and Sustainable Architecture": []
+                },
+                "PG - M.Sc": {
+                    "Computer Science": [],
+                    "Chemistry": [],
+                    "Physics": [],
+                    "Mathematics": []
+                },
+                "PG - MBA": { "Not Applicable": [] },
+                "PG - MCA": { "Not Applicable": [] },
+                "PG - MA": { "English (Language and Literature)": [] },
+                "PhD": {
+                    "Chemical Engineering": [],
+                    "Civil Engineering": [],
+                    "Computer Science and Engineering": [],
+                    "Electrical and Electronics Engineering": [],
+                    "Electronics and Communication Engineering": [],
+                    "Instrumentation and Control Engineering": [],
+                    "Mechanical Engineering": [],
+                    "Metallurgical and Materials Engineering": [],
+                    "Production Engineering": [],
+                    "Architecture": [],
+                    "Chemistry": [],
+                    "Computer Applications": [],
+                    "Humanities": [],
+                    "Energy and Environment": [],
+                    "Management Studies": [],
+                    "Mathematics": [],
+                    "Physics": [],
+
+                }
+
+            }
+            window.onload = function () {
+                var subjectSel = document.getElementById("courseName");
+                var topicSel = document.getElementById("departmentName");
+                for (var x in subjectObject) {
+                    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+                }
+                subjectSel.onchange = function () {
+                    //empty Chapters- and Topics- dropdowns
+                    topicSel.length = 1;
+                    //display correct values
+                    for (var y in subjectObject[this.value]) {
+                        topicSel.options[topicSel.options.length] = new Option(y, y);
+                    }
+                }
+            }
+    </script>
+
 </body>
+
 </html>

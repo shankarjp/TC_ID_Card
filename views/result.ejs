@@ -71,12 +71,6 @@
                         <div class="info-value" style="justify-self: center;"><%=student.RollNo %></div>
 
                     </div>
-                    <div class="info" style="display: flex;width:80%;font-size: 1.125rem;font-weight: bold;margin-top: 1em;">
-                        
-                        <div class="info-key" style="width:50%;justify-self: center;">Department : </div>
-                        <div class="info-value" style="width:50%;justify-self: center;"><%=student.Department %></div>
-
-                    </div>
 
                     <div class="info" style="display: flex;width:80%;font-size: 1.125rem;font-weight: bold;margin-top: 1em;">
                         
@@ -86,12 +80,12 @@
                     </div>
 
                     <% let course_batch = ""; %>
-                    <% if(student.Course === "UG"){ %>
+                    <% if(student.Course === "UG - B.Tech" || student.Course === "UG - B.Arch"){ %>
                     <%    course_batch = student.Batch+"-"+(parseInt(student.Batch)+4); %>
-                    <% } else if(student.Course === "PG"){ %>
-                    <%    course_batch = student.Batch+"-"+(parseInt(student.Batch)+3);; %>
                     <% } else if(student.Course === "PhD"){ %>
                     <%    course_batch = student.Batch; %>
+                    <% } else { %>
+                    <%    course_batch = student.Batch+"-"+(parseInt(student.Batch)+3); %>
                     <% } %>
                     <div class="info" style="display: flex;width:80%;font-size: 1.125rem;font-weight: bold;margin-top: 1em;">
                         
@@ -119,6 +113,14 @@
 
                 <!-- now the card details -->
                 <div class="infos" style="display: flex;background: whitesmoke;padding-bottom: 10px; flex-direction: column;align-items: center;margin-top: 1.5em;">
+
+                    <div class="info" style="display: flex;width:80%;font-size: 1.125rem;font-weight: bold;margin-top: 1em;">
+                        
+                        <div class="info-key" style="width:50%;justify-self: center;">Department : </div>
+                        <div class="info-value" style="width:50%;justify-self: center;"><%=student.Department %></div>
+
+                    </div>
+
                     <div class="info" style="display: flex;width:80%;font-size: 1.125rem;font-weight: bold;margin-top: 1em;">
                         
                         <div class="info-key" style="width:50%;justify-self: center;">Date Of Birth : </div>
